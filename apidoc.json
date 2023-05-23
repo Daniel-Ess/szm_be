@@ -1,0 +1,8 @@
+{
+    "name": "Simple REST API for SZM",
+    "version": "1.0.0",
+    "description": "API documentation",
+    "title": "Simple REST API for SZM",
+    "url" : "localhost:3000/api/"
+  }
+  
