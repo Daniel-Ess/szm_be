@@ -6,7 +6,7 @@ import * as deleteItem from './delete.item'
 // middlewares
 import validationMiddleware from '../../../../middlewares/validationMiddleware'
 
-const router = Router()
+const router = Router({ mergeParams: true })
 
 export default () => {
 	// Create a new item
