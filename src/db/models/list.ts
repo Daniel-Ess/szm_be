@@ -12,6 +12,7 @@ export class ListModel extends DatabaseModel {
 	// metadata
 	createdAt: Date
 	updatedAt: Date
+	deletedAt: Date
 }
 
 export default (sequelize: Sequelize, DataTypes: any) => {
@@ -31,7 +32,7 @@ export default (sequelize: Sequelize, DataTypes: any) => {
 		{
 			sequelize,
 			timestamps: true,
-			paranoid: false,
+			paranoid: true,
 			modelName: 'list'
 		}
 	)
