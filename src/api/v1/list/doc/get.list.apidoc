@@ -1,0 +1,32 @@
+/**
+    @api {get} v1/lists/:listID Get list
+    @apiVersion 1.0.0
+    @apiName GetList
+    @apiGroup List
+
+    @apiDescription Endpoint will return list with items
+
+    @apiParam (Param) {Number{1..}} listID List ID
+
+    @apiSuccess (Response) {Object} list Array of lists
+    @apiSuccess (Response) {Number{1..}} list.id List ID
+    @apiSuccess (Response) {String} list.name List name 
+    @apiSuccess (Response) {Object[]} lists.items Array of items in list
+    @apiSuccess (Response) {Number{1..}} lists.items.id Item ID
+    @apiSuccess (Response) {String} lists.items.name Item name 
+    
+    @apiSuccessExample Success-Response-Example:
+    HTTP/1.1 200 OK
+    {
+        "list": {
+            "id": 1,
+			"name": "list name",
+            items: [{
+                "id": 1,
+			    "name": "item name"
+            }]
+        }
+    }
+
+    @apiUse ErrorResponse
+*/

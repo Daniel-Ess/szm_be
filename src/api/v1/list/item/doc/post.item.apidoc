@@ -1,0 +1,36 @@
+/**
+    @api {post} v1/lists/:listID/items Create item in list
+    @apiVersion 1.0.0
+    @apiName PostItem
+    @apiGroup Item
+
+    @apiDescription Endpoint will create a new item in list
+
+    @apiParam (Body) {String{..50}} name Item name
+
+    @apiParamExample {json} Request-Body-Example:
+    {
+        "name": "item name"
+    }
+
+    @apiSuccess (Response) {Object[]} messages Array of message objects
+    @apiSuccess (Response) {String} messages.message Message text
+    @apiSuccess (Response) {String} messages.type="SUCCESS" Message type
+    @apiSuccess (Response) {Object} item Object of created item
+    @apiSuccess (Response) {Number} item.id Item ID
+
+
+    @apiSuccessExample Success-Response-Example:
+    HTTP/1.1 200 OK
+    {
+        "messages": [{
+            "message": "Item created successfully",
+			"type": "SUCCESS"
+        }],
+        "item": {
+            "id": 2
+        }
+    }
+
+    @apiUse ErrorResponse
+*/

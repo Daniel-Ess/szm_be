@@ -1,0 +1,36 @@
+/**
+    @api {post} v1/lists Create list
+    @apiVersion 1.0.0
+    @apiName PostList
+    @apiGroup List
+
+    @apiDescription Endpoint will create a new list
+
+    @apiParam (Body) {String{..50}} name List name
+
+    @apiParamExample {json} Request-Body-Example:
+    {
+        "name": "list name"
+    }
+
+    @apiSuccess (Response) {Object[]} messages Array of message objects
+    @apiSuccess (Response) {String} messages.message Message text
+    @apiSuccess (Response) {String} messages.type="SUCCESS" Message type
+    @apiSuccess (Response) {Object} list Object of created list
+    @apiSuccess (Response) {Number} list.id List ID
+
+
+    @apiSuccessExample Success-Response-Example:
+    HTTP/1.1 200 OK
+    {
+        "messages": [{
+            "message": "List created successfully",
+			"type": "SUCCESS"
+        }],
+        "list": {
+            "id": 2
+        }
+    }
+
+    @apiUse ErrorResponse
+*/

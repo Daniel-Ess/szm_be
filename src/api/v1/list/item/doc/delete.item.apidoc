@@ -1,0 +1,27 @@
+/**
+    @api {delete} v1/lists/:listID/items/:itemID Delete item in list
+    @apiVersion 1.0.0
+    @apiName DeleteItem
+    @apiGroup Item
+
+    @apiDescription Endpoint will delete an item in list
+
+    @apiParam (Param) {Number{1..}} listID List ID
+    @apiParam (Param) {Number{1..}} itemID Item ID
+
+    @apiSuccess (Response) {Object[]} messages Array of message objects
+    @apiSuccess (Response) {String} messages.message Message text
+    @apiSuccess (Response) {String} messages.type="SUCCESS" Message type
+
+
+    @apiSuccessExample Success-Response-Example:
+    HTTP/1.1 200 OK
+    {
+        "messages": [{
+            "message": "Item deleted successfully",
+			"type": "SUCCESS"
+        }]
+    }
+
+    @apiUse ErrorResponse
+*/

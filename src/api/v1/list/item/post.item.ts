@@ -33,7 +33,7 @@ export const workflow = async (req: Request, res: Response, next: NextFunction) 
 			throw new ErrorBuilder(404, 'List not found')
 		}
 
-		const duplicate = list.items.find(item => item.name === body.name)
+		const duplicate = list.items.find((item) => item.name === body.name)
 
 		if (duplicate) {
 			throw new ErrorBuilder(409, 'Item is already in the list')

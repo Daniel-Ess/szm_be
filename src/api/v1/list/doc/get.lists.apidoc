@@ -1,0 +1,23 @@
+/**
+    @api {get} v1/lists Get all lists
+    @apiVersion 1.0.0
+    @apiName GetLists
+    @apiGroup List
+
+    @apiDescription Endpoint will return all lists
+
+    @apiSuccess (Response) {Object[]} lists Array of lists
+    @apiSuccess (Response) {Number{1..}} lists.id List ID
+    @apiSuccess (Response) {String} lists.name List name 
+    
+    @apiSuccessExample Success-Response-Example:
+    HTTP/1.1 200 OK
+    {
+        "lists": [{
+            "id": 1,
+			"name": "list name"
+        }]
+    }
+
+    @apiUse ErrorResponse
+*/

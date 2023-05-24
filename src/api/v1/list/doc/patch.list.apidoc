@@ -1,0 +1,33 @@
+/**
+    @api {patch} v1/lists/:listID Patch list
+    @apiVersion 1.0.0
+    @apiName PatchList
+    @apiGroup List
+
+    @apiDescription Endpoint will update list
+
+    @apiParam (Param) {Number{1..}} listID List ID
+
+    @apiParam (Body) {String{..50}} name List name
+
+    @apiParamExample {json} Request-Body-Example:
+    {
+        "name": "list name"
+    }
+
+    @apiSuccess (Response) {Object[]} messages Array of message objects
+    @apiSuccess (Response) {String} messages.message Message text
+    @apiSuccess (Response) {String} messages.type="SUCCESS" Message type
+
+
+    @apiSuccessExample Success-Response-Example:
+    HTTP/1.1 200 OK
+    {
+        "messages": [{
+            "message": "List updated successfully",
+			"type": "SUCCESS"
+        }]
+    }
+
+    @apiUse ErrorResponse
+*/

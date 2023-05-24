@@ -15,7 +15,7 @@ export const workflow = async (req: Request, res: Response, next: NextFunction) 
 
 		const lists = await List.findAll({
 			attributes: ['id', 'name'],
-			order: ['id', 'DESC']
+			order: [['id', 'DESC']]
 		})
 
 		return res.json({
