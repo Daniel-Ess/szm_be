@@ -22,4 +22,4 @@ Steps to create database and user with all privileges on PostgreSQL 15+:
 #### DB_PASS           			| Required    | PostgreSQL database password
 #### DB_HOST           			| Optional    | PostgreSQL database host (default: localhost)
 #### DB_PORT           			| Optional    | PostgreSQL database port (default: 5432)
-#### DOMAIN           			| Optional    | Domain name for this application. (default: http://localhost:3000)
+#### DOMAIN           			| Optional    | Domain name for this application. (default: http://localhost:3001)

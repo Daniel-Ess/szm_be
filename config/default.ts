@@ -6,8 +6,8 @@ import {
 
 export default {
 	server: <IServerConfig>{
-		port: 3000,
-		domain: process.env.DOMAIN || 'http://localhost:3000',
+		port: 3001,
+		domain: process.env.DOMAIN || 'http://localhost:3001',
 		logDirectory: 'logs'
 	},
 	database: <IDatabaseConfig>{
